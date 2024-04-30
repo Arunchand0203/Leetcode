@@ -1,20 +1,47 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        List<Integer> resultList = new ArrayList<>();
-        Map<Integer, Integer> data = new HashMap<>();
-        for(int i = 0; i < nums.length; i++){
-            if(data.containsKey(nums[i])){
-                data.put(nums[i], data.get(nums[i])+1);
+       
+        int el1 = Integer.MIN_VALUE;
+        int el2 = Integer.MIN_VALUE;
+        int cnt1 = 0;
+        int cnt2 = 0;
+        int buf = nums.length / 3;
+
+        for(int i = 0; i< nums.length; i++){
+            if((cnt1 == 0 )&& (el2 != nums[i])){
+                cnt1 = 1;
+                el1 = nums[i];
+            }else if(cnt2 == 0 && el1 != nums[i]){
+                cnt2 = 1;
+                el2 = nums[i];
+            }else if(el1 == nums[i]){
+                cnt1++;
+            }else if(el2 == nums[i]){
+                cnt2++;
             }else{
-                data.put(nums[i], 1);
+                cnt1--;
+                cnt2--;
             }
         }
-        int value = nums.length/3;
-        for(Integer eachKey : data.keySet()){
-            if(data.get(eachKey) > value){
-                resultList.add(eachKey);
-            }
+    int cntr1 = 0;
+    int cntr2 = 0;
+    for(int i = 0; i< nums.length; i++){
+        if(el1 == nums[i]){
+            cntr1++;
+        }else if(el2 == nums[i]){
+            cntr2++;
         }
-    return resultList;
+    }
+    List<Integer> result = new ArrayList<>();
+    if(cntr1 > buf){
+        result.add(el1);
+    }
+
+    if(cntr2 > buf){
+        result.add(el2);
+    }
+
+return result;
+
     }
 }
