@@ -5,6 +5,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Array
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/Arunchand0203/Leetcode/tree/master/0011-container-with-most-water) |
 | [0035-search-insert-position](https://github.com/Arunchand0203/Leetcode/tree/master/0035-search-insert-position) |
 | [0792-binary-search](https://github.com/Arunchand0203/Leetcode/tree/master/0792-binary-search) |
 # Binary Search
@@ -20,3 +21,11 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/Arunchand0203/Leetcode/tree/master/0020-valid-parentheses) |
+# Two Pointers
+|  |
+| ------- |
+| [0011-container-with-most-water](https://github.com/Arunchand0203/Leetcode/tree/master/0011-container-with-most-water) |
+# Greedy
+|  |
+| ------- |
+| [0011-container-with-most-water](https://github.com/Arunchand0203/Leetcode/tree/master/0011-container-with-most-water) |
